@@ -62,9 +62,8 @@ ON `course_teacher`.`teacher_id` = `teachers`.`id`
 
 6.
 
-SELECT 
-        `teachers`.`name` `teacher_name`,
-        `teachers`.`surname` `teacher_surname`
+SELECT DISTINCT `teachers`.*
+        
 FROM `degrees`
 INNER JOIN `courses`
 ON `degrees`.`id` = `courses`.`degree_id`
@@ -79,3 +78,4 @@ INNER JOIN `departments`
 ON `degrees`.`department_id` = `departments`.`id`
 
 WHERE `departments`.`name` = "dipartimento di matematica"
+
